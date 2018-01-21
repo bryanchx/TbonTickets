@@ -1,0 +1,89 @@
+---
+#station_date:出发日期，格式ex：2018-01-06
+#station_trains:过滤车次，格式ex：
+                #    - "G1353"
+                #    - "G1329"
+                #    - "G1355"
+                #    - "G1303"
+                #    - "G1357"
+                #    - "G1305"
+                #    - "G1359"
+                #    - "G1361"
+                #    - "G1373"
+                #    - "G1363"
+#from_station: 始发站
+#to_station: 到达站
+#set_type: 坐席(商务座,二等座,特等座,软卧,硬卧,硬座,无座)
+#is_more_ticket:余票不足是否自动提交
+#select_refresh_interval:抢票刷新间隔时间，1为一秒，0.1为100毫秒，以此类推 如果捡漏推荐为1秒，刷票设置0.01
+#expect_refresh_interval:售票未开始，等待刷新间隔时间，1为一秒，0.1为100毫秒，以此类推
+#ticket_black_list:加入小黑屋的等待时间，默认3 min
+#enable_proxy:是否开启代理模式，代理速度比较慢，如果是抢票阶段，不建议开启
+#ticke_peoples: 乘客
+#damatu：打码兔账号，用于自动登录
+#is_aotu_code是否自动打码，如果选择Ture,则调用打码兔打码，默认不使用打码兔
+#is_email: 是否需要邮件通知 ex: True or False 切记，邮箱加完一定到config目录下测试emailConf功能是否正常
+
+#邮箱配置 列举163
+#  email: "xxx@163.com"
+#  notice_email_list: "123@qq.com"
+#  username: "xxxxx"
+#  password: "xxxxx
+#  host: "smtp.163.com"
+#邮箱配置 列举qq  ，qq设置比较复杂，需要在邮箱--账户--开启smtp服务，取得授权码==邮箱登录密码
+#  email: "xxx@qq.com"
+#  notice_email_list: "123@qq.com"
+#  username: "xxxxx"
+#  password: "授权码"
+#  host: "smtp.qq.com"
+
+
+set:
+  station_date: "2018-02-14"
+  station_trains:
+     - "D2226"
+#    - "G1312"
+#    - "G2912"
+#    - "D2276"
+#    - "K5226"
+#    - "K7772"
+#    - "G1329"
+#    - "G1359"
+#    - "G1361"
+#    - "G1373"
+#    - "G1363"
+#    - "G4933"
+  from_station: "深圳北"
+  to_station: "天门南"
+  set_type:
+#    - "商务座"
+    - "一等座"
+#    - "二等座"
+  is_more_ticket: True
+  ticke_peoples:
+    - "陈焕祥"
+  12306count:
+    - uesr: "***@qq.com"
+    - pwd: "***"
+
+select_refresh_interval: 1
+expect_refresh_interval: 0.3
+ticket_black_list_time: 3
+is_aotu_code: True
+#enable_proxy: False
+
+damatu:
+  uesr: "chx2379"
+  pwd: "***"
+
+email_conf:
+  is_email: True
+  email: "***@qq.com "
+  notice_email_list: "***@qq.com"
+  username: "***@qq.com"
+  password: "***"
+  host: "smtp.qq.com"
+
+
+
+
